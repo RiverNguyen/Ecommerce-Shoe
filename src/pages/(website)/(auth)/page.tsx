@@ -22,6 +22,10 @@ const AuthPage = () => {
                         <CardTitle>Đăng nhập</CardTitle>
                         <CardDescription>
                             Đăng nhập để sử dụng các tính năng của trang web.
+                            <br />
+                            Tài khoản admin: admin@gmail.com
+                            <br />
+                            Mật khẩu: admin123
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-2">
