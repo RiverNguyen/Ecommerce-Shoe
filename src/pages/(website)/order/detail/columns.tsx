@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown, BarcodeIcon, MoreHorizontal } from "lucide-react";
 
@@ -12,7 +13,6 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
-import ProductQuery from "@/common/hooks/ProductQuery";
 import ChangeMoney from "@/common/hooks/changeMoney";
 
 export const columns: ColumnDef<any>[] = [
