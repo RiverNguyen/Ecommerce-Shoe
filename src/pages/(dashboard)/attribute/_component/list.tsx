@@ -9,14 +9,13 @@ import {
     useReactTable,
 } from "@tanstack/react-table";
 
-import ProductQuery from "@/common/hooks/ProductQuery";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 import { useState } from "react";
+import HeaderTable from "../../_component/HeaderTable";
 import DataTable from "./DataTable";
 import FooterTable from "./FooterTable";
 import { columns } from "./columns";
-import HeaderTable from "../../_component/HeaderTable";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 
 const AttributeList = () => {
     const { data } = useQuery({

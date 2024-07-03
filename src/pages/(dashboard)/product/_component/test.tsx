@@ -1,5 +1,5 @@
-import MutationQuery from "@/common/hooks/MutationQuery";
-import { IProduct } from "@/common/types/product";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { uploadFileCloudinary } from "@/common/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -18,21 +18,12 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import Joi from "joi";
-import { useForm } from "react-hook-form";
-import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { toast } from "@/components/ui/use-toast";
-import { uploadFileCloudinary } from "@/common/lib/utils";
-import { joiResolver } from "@hookform/resolvers/joi";
+import { useForm } from "react-hook-form";
 
-import makeAnimated from "react-select/animated";
-import { colourOptions } from "@/common/types/test";
-
-import Select1 from "react-select";
-import { at } from "lodash";
 import { PlusCircleIcon } from "lucide-react";
 
 // const productSchema = Joi.object({
@@ -60,8 +51,6 @@ import { PlusCircleIcon } from "lucide-react";
 // });
 
 const TestAdd = () => {
-    const animatedComponents = makeAnimated();
-
     const form = useForm();
     const [gallery, setGallery] = useState<string[]>([]);
     const [image, setImage] = useState<string>("");
@@ -69,9 +58,9 @@ const TestAdd = () => {
     const [galleryPreview, setGalleryPreview] = useState<string[]>([]);
     const [selectCount, setSelectCount] = useState(1);
     const [sizeCount, setSizeCount] = useState(1);
-    const { onSubmit } = MutationQuery({
-        action: "CREATE",
-    });
+    // const { onSubmit } = MutationQuery({
+    //     action: "CREATE",
+    // });
     const { data: categories } = useQuery({
         queryKey: ["CATEGORY_LIST"],
         queryFn: async () => {
