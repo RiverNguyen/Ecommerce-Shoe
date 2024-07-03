@@ -8,6 +8,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
 import ChangeMoney from "@/common/hooks/changeMoney";
+import { HaftStar, Next, Star } from "@/components/icons";
 const ProductDetail = () => {
     const [user] = useLocalStorage("user", {});
     const userId = user?.user?._id;
@@ -73,15 +74,9 @@ const ProductDetail = () => {
                             <div className="filters-choose">
                                 <div className="filters-choose__action">
                                     <span className="filters__text">Home</span>
-                                    <img
-                                        src="/src/assets/icons/next.svg"
-                                        alt=""
-                                    />
+                                    <img src={Next} alt="" />
                                     <span className="filters__text">Shop</span>
-                                    <img
-                                        src="/src/assets/icons/next.svg"
-                                        alt=""
-                                    />
+                                    <img src={Next} alt="" />
                                 </div>
 
                                 <div className="filters-show">
@@ -152,26 +147,11 @@ const ProductDetail = () => {
                                 </p>
                                 <div className="products-info__judge">
                                     <div className="products__star">
-                                        <img
-                                            src="/src/assets/icons/star.svg"
-                                            alt=""
-                                        />
-                                        <img
-                                            src="/src/assets/icons/star.svg"
-                                            alt=""
-                                        />
-                                        <img
-                                            src="/src/assets/icons/star.svg"
-                                            alt=""
-                                        />
-                                        <img
-                                            src="/src/assets/icons/star.svg"
-                                            alt=""
-                                        />
-                                        <img
-                                            src="/src/assets/icons/star-half.svg"
-                                            alt=""
-                                        />
+                                        <img src={Star} alt="" />
+                                        <img src={Star} alt="" />
+                                        <img src={Star} alt="" />
+                                        <img src={Star} alt="" />
+                                        <img src={HaftStar} alt="" />
                                     </div>
                                     <div className="products__review">
                                         <span>5 Customer Review</span>

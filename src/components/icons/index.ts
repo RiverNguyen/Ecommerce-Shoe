@@ -9,6 +9,9 @@ import ShopImg1 from "@/assets/banner/1.png";
 import ShopImg2 from "@/assets/banner/2.png";
 import ShopImg3 from "@/assets/banner/3.png";
 import ShopImg4 from "@/assets/banner/shoe arrival instagram post.png";
+import Next from "@/assets/icons/next.svg";
+import Star from "@/assets/icons/star.svg";
+import HaftStar from "@/assets/icons/star-half.svg";
 export {
     UserIcon,
     SearchIcon,
@@ -21,4 +24,7 @@ export {
     ShopImg2,
     ShopImg3,
     ShopImg4,
+    Next,
+    Star,
+    HaftStar,
 };
